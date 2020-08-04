@@ -136,7 +136,7 @@ def Settings( **kwargs ):
     language = kwargs[ 'language' ]
     if language == 'cfamily':
         return {
-            'flags': flags
+            'flags': MakeRelativePathsInFlagsAbsolute(flags, DirectoryOfThisScript())
         }
 
     return {}
